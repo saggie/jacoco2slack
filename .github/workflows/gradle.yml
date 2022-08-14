@@ -2,7 +2,7 @@ name: Java CI with Gradle
 
 on:
   schedule:
-    - cron: '50 5 * * *'
+    - cron: '1 6 * * SUN'
 
 permissions:
   contents: read
