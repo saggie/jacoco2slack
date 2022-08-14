@@ -28,4 +28,4 @@ jobs:
       env:
         SLACK_URL: ${{ secrets.SLACK_URL }}
       run: |
-        ./post-coverage-to-slack "$SLACK_URL"
+        ./post-coverage-to-slack.sh "$SLACK_URL"
