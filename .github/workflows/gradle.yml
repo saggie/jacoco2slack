@@ -1,6 +1,9 @@
 name: Java CI with Gradle
 
 on:
+  push:
+    branches:
+      - '*'
   schedule:
     - cron: '1 6 * * SUN'
 
