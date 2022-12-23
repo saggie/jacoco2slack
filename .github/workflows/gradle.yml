@@ -19,9 +19,9 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'corretto'
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew test
     - name: Post coverage to Slack
       shell: bash
       env:
