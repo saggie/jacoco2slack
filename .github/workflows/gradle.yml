@@ -21,12 +21,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: build
+      run: ./gradlew build
     - name: Post coverage to Slack
       shell: bash
       env:
         SLACK_URL: ${{ secrets.SLACK_URL }}
-      run: |
-        ./post-coverage-to-slack.sh "$SLACK_URL"
+      run: ./post-coverage-to-slack.sh "$SLACK_URL"
