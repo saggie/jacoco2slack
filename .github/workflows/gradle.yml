@@ -21,7 +21,9 @@ jobs:
         java-version: '17'
         distribution: 'corretto'
     - name: Build with Gradle
-      run: ./gradlew test
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: test
     - name: Post coverage to Slack
       shell: bash
       env:
